@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hua Quang Phuoc - Portfolio</title>
 <meta name="description" content="Hứa Quang Phước: Math student at PTNK, AI researcher and developer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c4472a'/%3E%3Cstop offset='1' stop-color='%23da6a2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#fff8f1">
 <style>
-:root{--bg:#fff8f1;--card:#ffffff;--alt:#fdeee0;--text:#3a2e2a;--muted:#7a6a62;--accent:#c8502f;--grad:linear-gradient(135deg,#d9573a,#ee8a3c);--line:#f0dccb}
+:root{--bg:#fff8f1;--card:#ffffff;--alt:#fdeee0;--text:#3a2e2a;--muted:#7a6a62;--accent:#c8502f;--grad:linear-gradient(135deg,#c4472a,#d9622b);--line:#f0dccb}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Verdana,sans-serif;scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit;transition:color .3s}ul{list-style:none}
@@ -28,7 +30,9 @@ nav{display:flex;justify-content:center;align-items:center;height:70px;backgroun
 .stat b{display:block;font-size:1.7rem;color:var(--text)}.stat span{font-size:.8rem;color:var(--muted)}
 .btn{display:inline-block;padding:11px 28px;background:var(--grad);border-radius:50px;color:#fff;font-weight:700;box-shadow:0 4px 15px rgba(217,87,58,.3);transition:transform .3s}
 .btn:hover{transform:translateY(-3px)}
-.btn.ghost{background:transparent;border:2px solid var(--accent);box-shadow:none;margin-left:8px}
+.btn{margin-bottom:10px}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;margin-left:8px}
+.btn.ghost:hover{background:var(--accent);color:#fff}
 .hero-image{flex:1;display:flex;justify-content:center;animation:fadeR 1s ease both}
 .hero-image img{width:320px;height:320px;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 14px 40px rgba(200,80,47,.28)}
 section{padding:90px 10%}
@@ -45,7 +49,6 @@ section{padding:90px 10%}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px}
 .card{background:var(--card);padding:28px;border-radius:16px;border:1px solid var(--line);box-shadow:0 4px 18px rgba(120,70,40,.07);transition:.3s;display:flex;flex-direction:column}
 .card:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 12px 28px rgba(200,80,47,.16)}
-.card .ic{font-size:1.8rem;color:var(--accent);margin-bottom:12px}
 .card h3{font-size:1.2rem;margin-bottom:4px}
 .meta{color:var(--accent);font-size:.85rem;font-weight:600;margin-bottom:10px}
 .card p{color:var(--muted);font-size:.93rem;margin-bottom:12px}
@@ -61,7 +64,6 @@ section{padding:90px 10%}
 .tl-item li{list-style:disc;margin-left:18px;color:var(--muted);font-size:.92rem;margin-bottom:4px}
 .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .pill{background:var(--card);border:1px solid var(--line);border-radius:50px;padding:8px 18px;font-size:.9rem}
-.pill i{color:var(--accent);margin-right:6px}
 footer{background:var(--alt);text-align:center;padding:50px 10%;border-top:1px solid var(--line)}
 footer h2{font-size:2rem;margin-bottom:12px}
 .social{margin:26px 0;flex-wrap:wrap;display:flex;justify-content:center;gap:18px}
@@ -77,7 +79,7 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
 .nav-links{position:fixed;right:0;top:70px;height:calc(100vh - 70px);width:100%;background:var(--card);flex-direction:column;align-items:center;justify-content:center;transform:translateX(100%);transition:transform .4s;gap:26px}
 .nav-links.open{transform:none}}
 @media(max-width:968px){#intro{flex-direction:column-reverse;justify-content:center;text-align:center;padding-top:80px;padding-bottom:40px}
-.hero-content{padding:30px 0 0}.hero-content h1{font-size:2.8rem}.hero-content p{margin:auto}.stats{justify-content:center}}
+.hero-content{padding:30px 0 0}.hero-content h1{font-size:2.8rem}.hero-content p{margin:auto}.hero-content .quote{border-left:0;padding-left:0;margin-top:14px}.stats{justify-content:center}}
 @media(max-width:480px){section{padding:60px 5%}.hero-image img{width:240px;height:240px}.hero-content h1{font-size:2.3rem}.about{padding:26px}}
 </style>
 </head>
@@ -106,7 +108,7 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
   </div>
   <a href="#research" class="btn">See my research</a><a href="#contact" class="btn ghost">Get in touch</a>
  </div>
- <div class="hero-image"><img src="./463339833_1372982947440184_8568938141330448441_n.jpg" alt="Portrait of Hứa Quang Phước"></div>
+ <div class="hero-image"><img src="./avatar.png" alt="Portrait of Hứa Quang Phước"></div>
 </section>
 
 <section id="about" class="alt">
@@ -132,7 +134,7 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
    <ul><li>GPA: Grade 9 – 9.4 · Grade 10 – 9.6 · Current – 9.6</li></ul></div>
   <div class="card"><h3>Standardized tests</h3><div class="meta">Scores</div>
    <ul><li>SAT: 1490</li><li>IELTS: 7.0</li></ul>
-   <div class="tags"><span class="tag hl">AP Calculus BC: 5</span><span class="tag hl">AP Statistics: 5</span><span class="tag hl">AP CS A: 5</span></div></div>
+   <div class="tags"><span class="tag hl">AP Calculus BC: 5</span><span class="tag hl">AP Statistics: 5</span><span class="tag hl">AP CSA: 5</span></div></div>
   <div class="card"><h3>Courses &amp; certificates</h3><div class="meta">MindX · Coursera · FPT Polytechnic</div>
    <ul><li>MindX Technology School (2024 – 2026): 3 Computer Science courses (Basic, Advanced, Intensive) and 3 Web Development courses (Basic, Advanced, Intensive)</li>
    <li>Computer Science: Programming with a Purpose, Princeton University (Coursera, 2025)</li>
@@ -143,7 +145,7 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
   <div class="card"><h3>Gold Award</h3><div class="meta">HKIMO 2026 · National Heat Round</div><p>Hong Kong International Mathematical Olympiad.</p></div>
   <div class="card"><h3>Bronze Award</h3><div class="meta">HKIMO 2026 · International Round</div><p>Hong Kong International Mathematical Olympiad.</p></div>
   <div class="card"><h3>Best Environmental Impact</h3><div class="meta">AI Challenge Eco Gen (AIC) · 2026</div><p>Recognized for an AI project on environmental sustainability.</p></div>
-  <div class="card"><h3>Distinction</h3><div class="meta">American Mathematics Competitions · 2026</div><p>AMC.</p></div>
+  <div class="card"><h3>Distinction</h3><div class="meta">American Mathematics Competitions · 2026</div><p>Awarded Distinction in the AMC math contest.</p></div>
   <div class="card"><h3>AP Scholar Award</h3><div class="meta">National – Viet Nam · 2026</div><p>Scored 3 or higher on 3+ AP exams.</p></div>
   <div class="card"><h3>Silver Medal</h3><div class="meta">VTMO 2022</div><p>Vietnam Titan Math Olympiad.</p></div>
  </div>
@@ -152,7 +154,7 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
 <section id="research" class="alt">
  <h2 class="section-title">Research</h2>
  <div class="grid">
-  <div class="card"><span class="badge">Accepted · ICIIT 2027</span><h3>Noise-Robust Vietnamese Speaker Verification with Teacher-Student Alignment</h3><div class="meta">First author · Jun – Sep 2026</div>
+  <div class="card"><span class="badge">Accepted · ICIIT 2027</span><h3>Noise-Robust Vietnamese Speaker Verification with Teacher-Student Alignment</h3><div class="meta">Co-first author · Jun – Sep 2026</div>
    <p>Tested whether teacher-student objectives and Gaussian KL help short, noisy Vietnamese speaker verification, across 27 duration-noise conditions.</p>
    <ul><li>Plain AAM adaptation cut EER from 20.03% to 12.70% (clean) and 32.78% to 23.82% (0 dB noise)</li><li>Bootstrap CIs showed no statistically supported gain from the auxiliary losses</li><li>Advisors from HCMUT AI Tech Lab</li></ul>
    <div class="tags"><span class="tag">ECAPA-TDNN</span><span class="tag">Deep learning</span><span class="tag">Statistics</span></div></div>
@@ -196,7 +198,7 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
    <div class="tags"><span class="tag hl">Python</span><span class="tag">DSA</span><a href="https://github.com/phuochq2009" target="_blank" rel="noopener" class="tag">GitHub</a></div></div>
   <div class="card"><h3>Podcast: AI in my pocket</h3><div class="meta">Founder · Feb 2026 – Present</div>
    <p>Join a Gen Z high schooler exploring how tech intersects with study stress, mental health, and healthcare chaos. From late-night coding to building a real-world Clinic App, I discovered why we need 'Real Data' before 'AI'.</p>
-   <div class="tags"><a href="https://open.spotify.com/show/6pknd3AvSCqNl10at3xLEF" target="_blank" rel="noopener" class="tag hl"> Listen on Spotify</a></div></div>
+   <div class="tags"><a href="https://open.spotify.com/show/6pknd3AvSCqNl10at3xLEF" target="_blank" rel="noopener" class="tag hl">Listen on Spotify</a></div></div>
  </div>
  <h3 class="sub" style="text-align:center;margin-top:50px">Tech stack</h3>
  <div class="pills">
@@ -210,16 +212,16 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
 <section id="experience" class="alt">
  <h2 class="section-title">Experience &amp; Leadership</h2>
  <div class="tl">
+  <div class="tl-item"><h4>Vice President · MARs organization</h4><div class="meta">Sep 2025 – Present</div><ul>
+   <li>Coordinated tasks for 40 members between the board and departments</li><li>Ran recruitment, soft-skills workshops, and feedback-based improvements</li></ul></div>
   <div class="tl-item"><h4>Founder &amp; President · Future Computing Initiative</h4><div class="meta">Nov 2024 – Present</div><ul>
    <li>Student-led club connecting students with the tech industry through company visits and career exploration</li><li>Organized visits to 5+ technology companies</li></ul></div>
   <div class="tl-item"><h4>Founder &amp; President · Mộc Sắc Việt</h4><div class="meta">Jul 2024 – Present</div><ul>
-   <li>Cultural media project promoting Hue's history and heritage through research and short videos</li><li>Researched 10+ landmarks, produced 10+ short videos and 20+ content pieces</li></ul></div>
+   <li>Cultural media project promoting Huế's history and heritage through research and short videos</li><li>Researched 10+ landmarks, produced 10+ short videos and 20+ content pieces</li></ul></div>
   <div class="tl-item"><h4>Intern, Technology Consulting · Revive Technologies Inc</h4><div class="meta">May – Aug 2026</div><ul>
    <li>Supported AI proof-of-concept and pilot projects for customers across APEC</li><li>Helped build a knowledge-base governance framework for AI in the Vietnamese market</li><li>Researched Voice AI for contact centers and tested robot behaviors with AI and control software</li></ul></div>
   <div class="tl-item"><h4>Intern, AI Challenge · HCMUTE</h4><div class="meta">Jun – Jul 2026</div><ul>
    <li>Built a transfer-learning waste classifier (plastic, paper, metal, organic) with confusion-matrix and failure analysis</li><li>Developed object detection and vegetation-health modules; pitched the final project to academic mentors</li></ul></div>
-  <div class="tl-item"><h4>Vice President · MARs organization</h4><div class="meta">Sep 2025 – Present</div><ul>
-   <li>Coordinated tasks for 40 members between the board and departments</li><li>Ran recruitment, soft-skills workshops, and feedback-based improvements</li></ul></div>
   <div class="tl-item"><h4>Intern, Application Development · Saigon Treasure Commercial Joint Stock Bank (Sacombank)</h4><div class="meta">Jul – Aug 2025</div><ul>
    <li>Built an image classifier and an object-detection pipeline</li><li>Helped build a voicebot for debt-collection support</li></ul></div>
   <div class="tl-item"><h4>Field experience · EB Environmental Energy (Thừa Thiên Huế)</h4><div class="meta">Aug 2025</div><ul>
