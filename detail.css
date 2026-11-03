@@ -1,0 +1,14 @@
+const b=document.body,slug=b.dataset.slug,title=b.dataset.title;
+if(b.dataset.kind==='paper'){
+ const box=document.getElementById('paper'),url='papers/'+slug+'.pdf';
+ fetch(url,{method:'HEAD'}).then(r=>{if(!r.ok)throw 0;
+  box.innerHTML='<a class="cta-link" href="'+url+'" target="_blank" rel="noopener">Open the paper (PDF) ↗</a><iframe class="paper" src="'+url+'" title="Paper PDF"></iframe>';
+ }).catch(()=>{box.innerHTML='<p class="note">The paper will be posted here soon.</p>'});
+}else{
+ const g=document.getElementById('gallery');
+ Promise.all([...Array(8)].map((_,i)=>new Promise(res=>{const im=new Image();im.onload=()=>res(im);im.onerror=()=>res(null);im.loading='lazy';im.alt=title+' photo '+(i+1);im.src='images/'+slug+'/'+(i+1)+'.jpg'}))).then(a=>{
+  a=a.filter(Boolean);
+  if(!a.length){g.outerHTML='<p class="note">Photos coming soon.</p>';return}
+  a.forEach(im=>{const l=document.createElement('a');l.href=im.src;l.target='_blank';l.rel='noopener';l.append(im);g.append(l)});
+ });
+}

@@ -71,3 +71,21 @@ h1,h2,.section-title{font-family:Georgia,"Times New Roman",serif}
 @media(max-width:968px){#intro{flex-direction:column-reverse;justify-content:center;text-align:center;padding-top:80px;padding-bottom:40px}
 .hero-content{padding:30px 0 0}.hero-content h1{font-size:2.8rem}.hero-content p{margin:auto}.hero-content .quote{border-left:0;padding-left:0;margin-top:14px}.stats{justify-content:center}}
 @media(max-width:480px){section{padding:60px 5%}.hero-image img{width:240px;height:240px}.hero-content h1{font-size:2.3rem}.about{padding:26px}}
+
+.cta-link{display:inline-block;align-self:flex-start;margin-top:16px;padding:9px 20px;border-radius:50px;background:var(--grad);color:#fff;font-weight:700;font-size:.88rem;box-shadow:0 4px 14px rgba(196,71,42,.28);transition:transform .3s,box-shadow .3s}
+.cta-link:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,71,42,.36);color:#fff}
+.more{display:inline-block;margin-top:14px;font-weight:700;font-size:.88rem;color:var(--accent);align-self:flex-start}
+.more:hover{text-decoration:underline}
+.tl-item .more{margin-top:6px}
+.detail-top{padding:20px 5%;border-bottom:1px solid var(--line);background:rgba(255,248,241,.92);position:sticky;top:0;z-index:10}
+.detail-top a{font-weight:700;color:var(--accent)}
+.detail-wrap{max-width:900px;margin:0 auto;padding:40px 5% 80px}
+.detail-card:hover{transform:none;border-color:var(--line);box-shadow:0 4px 18px rgba(120,70,40,.07)}
+.dtitle{font-size:1.8rem;line-height:1.25;margin-bottom:6px}
+.detail-card .more{display:none}
+.detail-extra{margin-top:40px}.detail-extra h2{font-size:1.6rem;margin-bottom:16px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.gallery img{width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid var(--line);transition:transform .3s}
+.gallery a:hover img{transform:scale(1.03)}
+.paper{display:block;width:100%;height:80vh;margin-top:16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.note{color:var(--muted);font-style:italic}
